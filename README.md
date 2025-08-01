@@ -15,7 +15,7 @@ cd /path/to/folder/
 sudo dnf install gh
 gh auth login
 gh repo clone Patric-k-k/stormcoreweb
-cd ProjectStormCore.work.gd/
+cd stormcoreweb/
 sudo php -S 0.0.0.0:5000 router.php
 ```
 ## Install on Windows
@@ -26,6 +26,6 @@ sudo php -S 0.0.0.0:5000 router.php
 ```
 gh auth login
 gh repo clone Patric-k-k/stormcoreweb
-cd ProjectStormCore.work.gd/
+cd stormcoreweb/
 php -S 0.0.0.0:80 router.php
 ```
