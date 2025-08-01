@@ -5,3 +5,16 @@ In order to setup, you must first run `/internal/create_structure.php` whilst `i
 
 ## Running
 Run the command `php -S 0.0.0.0:80 router.php` while in the directory.
+
+## Installation on Linux Bazzite or Fedora
+```bash
+toolbox create
+toolbox enter
+sudo dnf install php
+cd /path/to/folder/
+sudo dnf install gh
+gh auth login
+gh repo clone Patric-k-k/ProjectStormCore.work.gd
+cd ProjectStormCore.work.gd/
+sudo php -S 0.0.0.0:5000 router.php
+```
