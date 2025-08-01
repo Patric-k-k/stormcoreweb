@@ -9,4 +9,5 @@ if ($ks != "1") {
     file_put_contents("../data/si.dat","");
     file_put_contents("../data/staff.dat","");
     file_put_contents("../data/superviser.dat","");
+    file_put_contents("../data/dev.dat","");
 }
