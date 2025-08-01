@@ -14,7 +14,7 @@ sudo dnf install php
 cd /path/to/folder/
 sudo dnf install gh
 gh auth login
-gh repo clone Patric-k-k/ProjectStormCore.work.gd
+gh repo clone Patric-k-k/stormcoreweb
 cd ProjectStormCore.work.gd/
 sudo php -S 0.0.0.0:5000 router.php
 ```
@@ -25,7 +25,7 @@ sudo php -S 0.0.0.0:5000 router.php
 - Run the following commands:
 ```
 gh auth login
-gh repo clone Patric-k-k/ProjectStormCore.work.gd
+gh repo clone Patric-k-k/stormcoreweb
 cd ProjectStormCore.work.gd/
 php -S 0.0.0.0:80 router.php
 ```
