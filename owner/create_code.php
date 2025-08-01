@@ -27,6 +27,7 @@ if (in_array($_COOKIE['code'],$logins)) {} else {
         <sl-checkbox id="si">Staff Instructer</sl-checkbox><br><br>
         <sl-checkbox id="s">Staff</sl-checkbox><br><br>
         <sl-checkbox id="sv">Superviser</sl-checkbox><br><br><br>
+        <sl-checkbox id="placeholder">Unnamed</sl-checkbox><br><br><br>
         <sl-button id="c" variant="success">Create Code</sl-button>
         <p id="r">Responce Status</p>
     <script>

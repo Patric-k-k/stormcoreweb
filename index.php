@@ -9,10 +9,10 @@
 <body class="bg-slate-900 text-slate-200">
     <div class="position-absolute w-screen h-screen -z-100 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(60deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-slate-800)]/10 ">
     <div class="h-20"></div>
-    <div class="mx-auto w-2/3 text-center bg-slate-800 h-[50%] rounded-2xl shadow-2xl shadow-cyan-600 p-4">
-    <p class="text-3xl mb-8">Please log in.</p>
-    <input placeholder="logincode" class="w-1/6 rounded-2xl bg-slate-900 text-center" id="logincode"></input> <br><br>
-    <button id="li" class="rounded-xl w-1/6 bg-lime-400 text-zinc-900">Log in</button>
+    <div class="mx-auto w-2/3 text-center bg-slate-800 h-[50%] rounded-2xl shadow-2xl shadow-cyan-600 p-4 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(5000000deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-slate-900)]/10 transition-all transition-descrete duration-500 ease-out hover:shadow-lg">
+    <p class="text-3xl mb-8 transition-all transition-descrete duration-500 ease-out hover:text-4xl">Please log in.</p>
+    <input placeholder="logincode" class="w-1/6 rounded-2xl bg-slate-900 text-center hover:w-3/12 transition-all transition-discrete duration-500 ease-out sm:w-1/2" id="logincode"></input> <br><br>
+    <button id="li" class="rounded-xl w-1/6 bg-lime-400 text-zinc-900 hover:w-3/12 hover:text-zinc-800 transition-all transition-discrete duration-500 ease-out sm:w-1/2">Log in</button>
     </div>
     <script>
 $("#li").click(function() {
