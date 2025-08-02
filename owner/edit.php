@@ -19,34 +19,19 @@ if (in_array($_COOKIE['code'],$logins)) {} else {
 <body class="bg-slate-900 text-slate-100 sl-theme-dark">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css" />
     <div class="w-6/8 mx-auto bg-slate-800/20 h-9/10 mt-[2%] p-4 rounded-2xl">
-        <sl-input id="cd" placeholder="Code"></sl-input><br><br>
-        <sl-checkbox id="d">Dev</sl-checkbox><br><br>
-        <sl-checkbox id="di">Driving Instructer</sl-checkbox><br><br>
-        <sl-checkbox id="e">Exec</sl-checkbox><br><br>
-        <sl-checkbox id="h">HR</sl-checkbox><br><br>
-        <sl-checkbox id="si">Staff Instructer</sl-checkbox><br><br>
-        <sl-checkbox id="s">Staff</sl-checkbox><br><br>
-        <sl-checkbox id="sv">Superviser</sl-checkbox><br><br>
-        <sl-checkbox id="wc">Watch Commander</sl-checkbox><br><br><br>
-        <sl-button id="c" variant="success">Create Code</sl-button>
+        <sl-textarea resize="auto" type="text" id="contentarea" value="<?php echo str_replace('"',"''",file_get_contents("../books/" . $_GET["b"] . "/data.md"));?>"></sl-textarea><br><br>
+        <sl-button id="c" variant="success">Submit Edit</sl-button>
         <p id="r" style="display:none;">Responce Status</p><br><br><br><br><br>
         <sl-button id="gotoexec" variant="primary" outline>[exec menu]</sl-button>
     <script>
 $("#c").click(function() {
     $.ajax({
         method: "POST",
-        url: "internal/create.php",
+        url: "internal/applyedit.php",
         data: {
             code: "<?php echo htmlspecialchars($_COOKIE["code"]); ?>",
-            cd: $("#cd").val(),
-            dev: $("#d").prop("checked"), 
-            di: $("#di").prop("checked"),
-            exec: $("#e").prop("checked"),
-            hr: $("#h").prop("checked"),
-            si: $("#si").prop("checked"),
-            staff: $("#s").prop("checked"),
-            superviser: $("#sv").prop("checked"),
-            superviser: $("#wc").prop("checked")
+            page: "<?php echo htmlspecialchars($_GET["b"]); ?>",
+            content: document.getElementById("contentarea").value
         }
     }).done(function( html ) {
         console.log(html);
@@ -65,7 +50,7 @@ $("#gotoexec").click(function() {
     </script><br><br>
     <sl-alert variant="warning" open>
         <sl-icon slot="icon" name="exclamation-triangle"></sl-icon>
-        A way to remove codes is not currently implemented. Contact a Web Admin if you want a code removed.
+        A way to create new pages and edit page permissions is not currently implemented. You must contact a Web Admin to do so (somebody with access to hoster's file system).
     </sl-alert>
     </div>
 </body>

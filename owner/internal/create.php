@@ -20,6 +20,7 @@ $hr = $_POST["hr"];
 $si = $_POST["si"];
 $staff = $_POST["staff"];
 $superviser = $_POST["superviser"];
+$wc = $_POST["wc"];
 file_put_contents("../../data/codes.dat","\n" . $cd, FILE_APPEND);
 if ($dev == "true") {
     file_put_contents("../../data/dev.dat","\n" . $cd, FILE_APPEND);
@@ -41,5 +42,8 @@ if ($staff == "true") {
 };
 if ($superviser == "true") {
     file_put_contents("../../data/superviser.dat","\n" . $cd, FILE_APPEND);
+};
+if ($wc == "true") {
+    file_put_contents("../../data/wc.dat","\n" . $cd, FILE_APPEND);
 };
 echo "success?";
